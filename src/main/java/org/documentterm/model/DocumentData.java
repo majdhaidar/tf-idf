@@ -1,5 +1,6 @@
 package org.documentterm.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ import java.util.Map;
  * retrieving the frequency of a specific term. It is commonly utilized in text
  * processing and information retrieval tasks such as TF-IDF computation.
  */
-public class DocumentData {
+public class DocumentData implements Serializable {
     private Map<String, Double> termFrequency = new HashMap<>();
 
     public void addTerm(String term, double frequency){
